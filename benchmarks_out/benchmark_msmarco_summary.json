@@ -1,0 +1,110 @@
+{
+  "dataset": "msmarco",
+  "sample_count": 100,
+  "total_runtime_s": 0.75,
+  "strategies": {
+    "full_context": {
+      "tokens_saved_pct": 0.0,
+      "em_mean": 1.0,
+      "f1_mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "f1_retained_pct": 100.0,
+      "evidence_recall_mean": 1.0,
+      "latency_ms": 0.29,
+      "fallback_rate_pct": 0.0
+    },
+    "top_k": {
+      "tokens_saved_pct": 74.9959,
+      "em_mean": 0.33,
+      "f1_mean": 0.33,
+      "ci_low": 0.24,
+      "ci_high": 0.42,
+      "f1_retained_pct": 33.0,
+      "evidence_recall_mean": 0.33,
+      "latency_ms": 0.38,
+      "fallback_rate_pct": 0.0
+    },
+    "random_truncation": {
+      "tokens_saved_pct": 58.9733,
+      "em_mean": 0.49,
+      "f1_mean": 0.49,
+      "ci_low": 0.39,
+      "ci_high": 0.58,
+      "f1_retained_pct": 49.0,
+      "evidence_recall_mean": 0.49,
+      "latency_ms": 0.41,
+      "fallback_rate_pct": 0.0
+    },
+    "bm25": {
+      "tokens_saved_pct": 75.9004,
+      "em_mean": 0.5,
+      "f1_mean": 0.5,
+      "ci_low": 0.4,
+      "ci_high": 0.5902,
+      "f1_retained_pct": 50.0,
+      "evidence_recall_mean": 0.5,
+      "latency_ms": 0.58,
+      "fallback_rate_pct": 0.0
+    },
+    "rerank_only": {
+      "tokens_saved_pct": 58.0421,
+      "em_mean": 1.0,
+      "f1_mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "f1_retained_pct": 100.0,
+      "evidence_recall_mean": 1.0,
+      "latency_ms": 0.66,
+      "fallback_rate_pct": 0.0
+    },
+    "contextpilot": {
+      "tokens_saved_pct": 91.1362,
+      "em_mean": 1.0,
+      "f1_mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "f1_retained_pct": 100.0,
+      "evidence_recall_mean": 1.0,
+      "latency_ms": 0.7,
+      "fallback_rate_pct": 0.0
+    }
+  },
+  "ablations": {
+    "no_rerank": {
+      "tokens_saved_pct": 59.0489,
+      "f1_mean": 0.46,
+      "f1_retained_pct": 46.0,
+      "evidence_recall_mean": 0.46,
+      "latency_ms": 0.48
+    },
+    "no_dedupe": {
+      "tokens_saved_pct": 91.1362,
+      "f1_mean": 1.0,
+      "f1_retained_pct": 100.0,
+      "evidence_recall_mean": 1.0,
+      "latency_ms": 0.68
+    },
+    "no_guard": {
+      "tokens_saved_pct": 91.1362,
+      "f1_mean": 1.0,
+      "f1_retained_pct": 100.0,
+      "evidence_recall_mean": 1.0,
+      "latency_ms": 0.69
+    },
+    "no_cache_order": {
+      "tokens_saved_pct": 91.1362,
+      "f1_mean": 1.0,
+      "f1_retained_pct": 100.0,
+      "evidence_recall_mean": 1.0,
+      "latency_ms": 0.65
+    },
+    "no_multihop": {
+      "tokens_saved_pct": 91.1362,
+      "f1_mean": 1.0,
+      "f1_retained_pct": 100.0,
+      "evidence_recall_mean": 1.0,
+      "latency_ms": 0.69
+    }
+  }
+}

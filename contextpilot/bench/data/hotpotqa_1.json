@@ -1,0 +1,125 @@
+[
+  {
+    "id": "hotpotqa_0001",
+    "dataset": "hotpotqa",
+    "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+    "passages": [
+      {
+        "id": "hotpotqa_0001_d8",
+        "text": "Deliver Us from Evil is a 2014 American supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d2",
+        "text": "Biola University is a private Christian university in La Mirada, California.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d9",
+        "text": "Glen or Glenda is a 1953 American docudrama film about cross-dressing and transvestism.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d14",
+        "text": "The Exorcism of Emily Rose is a 2005 American legal drama supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d15",
+        "text": "Doctor Strange is a 2016 American superhero film based on the Marvel Comics character of the same name.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d18",
+        "text": "The Marvel Cinematic Universe is an American media franchise and shared universe centered on a series of superhero films.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_p2",
+        "text": "Edward Davis Wood Jr. (October 10, 1924 - December 10, 1978) was an American filmmaker, actor, and pulp crime author.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0001_d10",
+        "text": "Night of the Ghouls is a 1959 horror film written and directed by Edward D. Wood Jr.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d3",
+        "text": "Tim Burton directed the 1994 biographical comedy-drama film titled Ed Wood, starring Johnny Depp.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d4",
+        "text": "Sinister is a 2012 supernatural horror film directed by Scott Derrickson and written by Derrickson and C. Robert Cargill.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d20",
+        "text": "Plan 9 from Outer Space is a 1957 American black-and-white science fiction-horror film produced by Ed Wood.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d1",
+        "text": "Orson Welles was an American director, actor, screenwriter, and producer who Wood greatly admired.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_p1",
+        "text": "Scott Derrickson (born July 16, 1966) is an American filmmaker. He is best known for directing horror films such as Sinister and the Marvel Cinematic Universe superhero film Doctor Strange.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0001_d17",
+        "text": "Bela Lugosi was a Hungarian-American actor best remembered for portraying Count Dracula in the 1931 film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d11",
+        "text": "American cinema has had a profound effect on world entertainment since the early 20th century.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d7",
+        "text": "Johnny Depp portrayed the eccentric director Ed Wood in the 1994 biographical film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d13",
+        "text": "Ed Wood in the 1950s made several low-budget science fiction and horror films including Glen or Glenda and Plan 9 from Outer Space.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d6",
+        "text": "Benedict Cumberbatch portrays Dr. Stephen Strange in Doctor Strange, directed by Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d12",
+        "text": "Bride of the Monster is a 1955 science fiction horror film co-written and directed by Edward D. Wood Jr.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d16",
+        "text": "Sarah Derrickson is a film producer who collaborated on various projects in independent film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d19",
+        "text": "Scott Derrickson attended Biola University where he earned a B.A. in Humanities with an emphasis on literature.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d5",
+        "text": "C. Robert Cargill is an American screenwriter, novelist, and former film critic known as Massawyrm.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_supporting_ids": [
+      "hotpotqa_0001_p1",
+      "hotpotqa_0001_p2"
+    ],
+    "is_multi_hop": true
+  }
+]

@@ -1,0 +1,1157 @@
+[
+  {
+    "id": "hotpotqa_0001",
+    "dataset": "hotpotqa",
+    "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+    "passages": [
+      {
+        "id": "hotpotqa_0001_d8",
+        "text": "Deliver Us from Evil is a 2014 American supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d2",
+        "text": "Biola University is a private Christian university in La Mirada, California.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d9",
+        "text": "Glen or Glenda is a 1953 American docudrama film about cross-dressing and transvestism.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d14",
+        "text": "The Exorcism of Emily Rose is a 2005 American legal drama supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d15",
+        "text": "Doctor Strange is a 2016 American superhero film based on the Marvel Comics character of the same name.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d18",
+        "text": "The Marvel Cinematic Universe is an American media franchise and shared universe centered on a series of superhero films.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_p2",
+        "text": "Edward Davis Wood Jr. (October 10, 1924 - December 10, 1978) was an American filmmaker, actor, and pulp crime author.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0001_d10",
+        "text": "Night of the Ghouls is a 1959 horror film written and directed by Edward D. Wood Jr.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d3",
+        "text": "Tim Burton directed the 1994 biographical comedy-drama film titled Ed Wood, starring Johnny Depp.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d4",
+        "text": "Sinister is a 2012 supernatural horror film directed by Scott Derrickson and written by Derrickson and C. Robert Cargill.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d20",
+        "text": "Plan 9 from Outer Space is a 1957 American black-and-white science fiction-horror film produced by Ed Wood.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d1",
+        "text": "Orson Welles was an American director, actor, screenwriter, and producer who Wood greatly admired.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_p1",
+        "text": "Scott Derrickson (born July 16, 1966) is an American filmmaker. He is best known for directing horror films such as Sinister and the Marvel Cinematic Universe superhero film Doctor Strange.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0001_d17",
+        "text": "Bela Lugosi was a Hungarian-American actor best remembered for portraying Count Dracula in the 1931 film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d11",
+        "text": "American cinema has had a profound effect on world entertainment since the early 20th century.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d7",
+        "text": "Johnny Depp portrayed the eccentric director Ed Wood in the 1994 biographical film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d13",
+        "text": "Ed Wood in the 1950s made several low-budget science fiction and horror films including Glen or Glenda and Plan 9 from Outer Space.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d6",
+        "text": "Benedict Cumberbatch portrays Dr. Stephen Strange in Doctor Strange, directed by Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d12",
+        "text": "Bride of the Monster is a 1955 science fiction horror film co-written and directed by Edward D. Wood Jr.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d16",
+        "text": "Sarah Derrickson is a film producer who collaborated on various projects in independent film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d19",
+        "text": "Scott Derrickson attended Biola University where he earned a B.A. in Humanities with an emphasis on literature.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0001_d5",
+        "text": "C. Robert Cargill is an American screenwriter, novelist, and former film critic known as Massawyrm.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_supporting_ids": [
+      "hotpotqa_0001_p1",
+      "hotpotqa_0001_p2"
+    ],
+    "is_multi_hop": true
+  },
+  {
+    "id": "hotpotqa_0002",
+    "dataset": "hotpotqa",
+    "question": "Which film has the director who was born earlier, Inception or Pulp Fiction?",
+    "passages": [
+      {
+        "id": "hotpotqa_0002_p1",
+        "text": "Inception is a 2010 science fiction action film written and directed by Christopher Nolan. Christopher Nolan was born on 30 July 1970 in London, England.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0002_d6",
+        "text": "Christopher Nolan is a British-American filmmaker known for his Hollywood blockbusters with complex storytelling.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d14",
+        "text": "Inglourious Basterds is a 2009 war film written and directed by Quentin Tarantino starring Brad Pitt.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d5",
+        "text": "Hans Zimmer composed the iconic score for Inception, including the track 'Time'.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d16",
+        "text": "Film directors born in the 1960s and 1970s often drew inspiration from classic American and European cinema.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d17",
+        "text": "Quentin Tarantino is an American film director, screenwriter, producer, and author celebrated for his non-linear storylines.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d8",
+        "text": "John Travolta and Samuel L. Jackson starred in Pulp Fiction as Vincent Vega and Jules Winnfield.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d15",
+        "text": "Dunkirk is a 2017 historical war film written, directed, and produced by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_p2",
+        "text": "Pulp Fiction is a 1994 American crime film written and directed by Quentin Tarantino. Quentin Tarantino was born on March 27, 1963 in Knoxville, Tennessee.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0002_d3",
+        "text": "Kill Bill: Volume 1 is a 2003 American martial arts film written and directed by Quentin Tarantino.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d9",
+        "text": "Reservoir Dogs is a 1992 American independent crime film written and directed by Quentin Tarantino in his feature-length debut.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d18",
+        "text": "Oppenheimer is a 2023 biographical drama film written, directed, and produced by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d12",
+        "text": "Cinema of the United States has produced many critically acclaimed directors across the 1990s and 2000s.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d4",
+        "text": "Django Unchained is a 2012 American revisionist Western film written and directed by Quentin Tarantino.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d1",
+        "text": "Leonardo DiCaprio starred in Inception as Dom Cobb, a professional thief who steals information from subconscious minds.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d10",
+        "text": "The Dark Knight Trilogy was directed by Christopher Nolan between 2005 and 2012.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d13",
+        "text": "Interstellar is a 2014 epic science fiction film directed, co-written and produced by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d7",
+        "text": "The 67th Academy Awards ceremony took place on Monday, March 27, 1995 at the Shrine Auditorium in Los Angeles.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d11",
+        "text": "Memento is a 2000 American neo-noir psychological mystery film written and directed by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0002_d2",
+        "text": "Once Upon a Time in Hollywood is a 2019 comedy-drama film written and directed by Quentin Tarantino.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "Pulp Fiction",
+    "gold_supporting_ids": [
+      "hotpotqa_0002_p1",
+      "hotpotqa_0002_p2"
+    ],
+    "is_multi_hop": true
+  },
+  {
+    "id": "hotpotqa_0003",
+    "dataset": "hotpotqa",
+    "question": "What government agency was headed by the author of the report on the assassination of John F. Kennedy?",
+    "passages": [
+      {
+        "id": "hotpotqa_0003_d14",
+        "text": "Dealey Plaza in Dallas was the location where President Kennedy's motorcade was fired upon.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d1",
+        "text": "The National Archives and Records Administration preserves historical government records.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_p1",
+        "text": "The Warren Commission report on the assassination of President John F. Kennedy was headed by Chief Justice Earl Warren.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0003_d2",
+        "text": "United States Court of Appeals serves as intermediate appellate federal courts.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d18",
+        "text": "Gerald Ford was a member of the Warren Commission before later becoming President of the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d11",
+        "text": "The Department of Justice oversees federal law enforcement in the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_p2",
+        "text": "Earl Warren served as the 14th Chief Justice of the United States, heading the Supreme Court of the United States from 1953 to 1969.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0003_d4",
+        "text": "Constitutional law in the United States is largely shaped by landmark decisions of the Supreme Court.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d9",
+        "text": "Federal judicial appointments require nomination by the President and confirmation by the Senate.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d5",
+        "text": "The Central Intelligence Agency (CIA) provided intelligence dossiers during the 1960s.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d8",
+        "text": "The United States Congress consists of the Senate and the House of Representatives.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d15",
+        "text": "The Supreme Court of the United States is the highest court in the federal judiciary of the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d12",
+        "text": "Lyndon B. Johnson created the President's Commission on the Assassination of President Kennedy on November 29, 1963.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d16",
+        "text": "The Federal Bureau of Investigation (FBI) conducted extensive investigations following the assassination.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d10",
+        "text": "Chief Justice Earl Warren presided over the landmark case Brown v. Board of Education in 1954.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d6",
+        "text": "Texas Governor John Connally was also wounded during the shooting of President Kennedy.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d17",
+        "text": "The Secret Service is responsible for protecting the President of the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d7",
+        "text": "The House Select Committee on Assassinations reinvestigated the assassination of JFK in 1976.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d3",
+        "text": "Lee Harvey Oswald was arrested for the assassination of President Kennedy shortly after the shooting.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d13",
+        "text": "John F. Kennedy, the 35th president of the United States, was assassinated on November 22, 1963 in Dallas, Texas.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0003_d19",
+        "text": "Jack Ruby shot and killed Lee Harvey Oswald in the basement of Dallas police headquarters.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "Supreme Court of the United States",
+    "gold_supporting_ids": [
+      "hotpotqa_0003_p1",
+      "hotpotqa_0003_p2"
+    ],
+    "is_multi_hop": true
+  },
+  {
+    "id": "hotpotqa_0004",
+    "dataset": "hotpotqa",
+    "question": "Were Scott Derrickson and Ed Wood of the same nationality? [Variant #4]",
+    "passages": [
+      {
+        "id": "hotpotqa_0004_d9",
+        "text": "Context note #4: Bride of the Monster is a 1955 science fiction horror film co-written and directed by Edward D. Wood Jr.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d2",
+        "text": "Context note #4: Ed Wood in the 1950s made several low-budget science fiction and horror films including Glen or Glenda and Plan 9 from Outer Space.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d14",
+        "text": "Context note #4: Tim Burton directed the 1994 biographical comedy-drama film titled Ed Wood, starring Johnny Depp.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d18",
+        "text": "Context note #4: Biola University is a private Christian university in La Mirada, California.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d6",
+        "text": "Context note #4: Sarah Derrickson is a film producer who collaborated on various projects in independent film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d16",
+        "text": "Context note #4: Doctor Strange is a 2016 American superhero film based on the Marvel Comics character of the same name.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d5",
+        "text": "Context note #4: The Exorcism of Emily Rose is a 2005 American legal drama supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d11",
+        "text": "Context note #4: The Marvel Cinematic Universe is an American media franchise and shared universe centered on a series of superhero films.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_p2",
+        "text": "Edward Davis Wood Jr. (October 10, 1924 - December 10, 1978) was an American filmmaker, actor, and pulp crime author.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0004_d17",
+        "text": "Context note #4: Benedict Cumberbatch portrays Dr. Stephen Strange in Doctor Strange, directed by Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d1",
+        "text": "Context note #4: Night of the Ghouls is a 1959 horror film written and directed by Edward D. Wood Jr.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d7",
+        "text": "Context note #4: American cinema has had a profound effect on world entertainment since the early 20th century.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d3",
+        "text": "Context note #4: Orson Welles was an American director, actor, screenwriter, and producer who Wood greatly admired.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d15",
+        "text": "Context note #4: Glen or Glenda is a 1953 American docudrama film about cross-dressing and transvestism.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d10",
+        "text": "Context note #4: Deliver Us from Evil is a 2014 American supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_p1",
+        "text": "Scott Derrickson (born July 16, 1966) is an American filmmaker. He is best known for directing horror films such as Sinister and the Marvel Cinematic Universe superhero film Doctor Strange.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0004_d13",
+        "text": "Context note #4: C. Robert Cargill is an American screenwriter, novelist, and former film critic known as Massawyrm.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d4",
+        "text": "Context note #4: Johnny Depp portrayed the eccentric director Ed Wood in the 1994 biographical film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d12",
+        "text": "Context note #4: Bela Lugosi was a Hungarian-American actor best remembered for portraying Count Dracula in the 1931 film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0004_d8",
+        "text": "Context note #4: Scott Derrickson attended Biola University where he earned a B.A. in Humanities with an emphasis on literature.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_supporting_ids": [
+      "hotpotqa_0004_p1",
+      "hotpotqa_0004_p2"
+    ],
+    "is_multi_hop": true
+  },
+  {
+    "id": "hotpotqa_0005",
+    "dataset": "hotpotqa",
+    "question": "Which film has the director who was born earlier, Inception or Pulp Fiction? [Variant #5]",
+    "passages": [
+      {
+        "id": "hotpotqa_0005_p2",
+        "text": "Pulp Fiction is a 1994 American crime film written and directed by Quentin Tarantino. Quentin Tarantino was born on March 27, 1963 in Knoxville, Tennessee.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0005_d1",
+        "text": "Context note #5: Hans Zimmer composed the iconic score for Inception, including the track 'Time'.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d6",
+        "text": "Context note #5: Oppenheimer is a 2023 biographical drama film written, directed, and produced by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_p1",
+        "text": "Inception is a 2010 science fiction action film written and directed by Christopher Nolan. Christopher Nolan was born on 30 July 1970 in London, England.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0005_d18",
+        "text": "Context note #5: Inglourious Basterds is a 2009 war film written and directed by Quentin Tarantino starring Brad Pitt.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d8",
+        "text": "Context note #5: Once Upon a Time in Hollywood is a 2019 comedy-drama film written and directed by Quentin Tarantino.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d9",
+        "text": "Context note #5: Cinema of the United States has produced many critically acclaimed directors across the 1990s and 2000s.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d17",
+        "text": "Context note #5: Christopher Nolan is a British-American filmmaker known for his Hollywood blockbusters with complex storytelling.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d5",
+        "text": "Context note #5: Cannes Film Festival awarded the Palme d'Or to Pulp Fiction in May 1994.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d3",
+        "text": "Context note #5: Interstellar is a 2014 epic science fiction film directed, co-written and produced by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d13",
+        "text": "Context note #5: Quentin Tarantino is an American film director, screenwriter, producer, and author celebrated for his non-linear storylines.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d10",
+        "text": "Context note #5: John Travolta and Samuel L. Jackson starred in Pulp Fiction as Vincent Vega and Jules Winnfield.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d11",
+        "text": "Context note #5: The Dark Knight Trilogy was directed by Christopher Nolan between 2005 and 2012.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d15",
+        "text": "Context note #5: Kill Bill: Volume 1 is a 2003 American martial arts film written and directed by Quentin Tarantino.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d2",
+        "text": "Context note #5: Leonardo DiCaprio starred in Inception as Dom Cobb, a professional thief who steals information from subconscious minds.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d12",
+        "text": "Context note #5: British film directors have made significant contributions to Hollywood and international cinema.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d7",
+        "text": "Context note #5: Memento is a 2000 American neo-noir psychological mystery film written and directed by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d4",
+        "text": "Context note #5: Film directors born in the 1960s and 1970s often drew inspiration from classic American and European cinema.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d16",
+        "text": "Context note #5: The 67th Academy Awards ceremony took place on Monday, March 27, 1995 at the Shrine Auditorium in Los Angeles.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0005_d14",
+        "text": "Context note #5: Django Unchained is a 2012 American revisionist Western film written and directed by Quentin Tarantino.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "Pulp Fiction",
+    "gold_supporting_ids": [
+      "hotpotqa_0005_p1",
+      "hotpotqa_0005_p2"
+    ],
+    "is_multi_hop": true
+  },
+  {
+    "id": "hotpotqa_0006",
+    "dataset": "hotpotqa",
+    "question": "What government agency was headed by the author of the report on the assassination of John F. Kennedy? [Variant #6]",
+    "passages": [
+      {
+        "id": "hotpotqa_0006_d1",
+        "text": "Context note #6: Chief Justice Earl Warren presided over the landmark case Brown v. Board of Education in 1954.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d9",
+        "text": "Context note #6: Dealey Plaza in Dallas was the location where President Kennedy's motorcade was fired upon.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d7",
+        "text": "Context note #6: The Department of Justice oversees federal law enforcement in the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d17",
+        "text": "Context note #6: Gerald Ford was a member of the Warren Commission before later becoming President of the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_p1",
+        "text": "The Warren Commission report on the assassination of President John F. Kennedy was headed by Chief Justice Earl Warren.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0006_d15",
+        "text": "Context note #6: Jack Ruby shot and killed Lee Harvey Oswald in the basement of Dallas police headquarters.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d13",
+        "text": "Context note #6: Texas Governor John Connally was also wounded during the shooting of President Kennedy.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d8",
+        "text": "Context note #6: The National Archives and Records Administration preserves historical government records.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d4",
+        "text": "Context note #6: Allen Dulles, former director of the CIA, was appointed as a member of the Warren Commission.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d12",
+        "text": "Context note #6: United States Court of Appeals serves as intermediate appellate federal courts.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d10",
+        "text": "Context note #6: The Supreme Court of the United States is the highest court in the federal judiciary of the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_p2",
+        "text": "Earl Warren served as the 14th Chief Justice of the United States, heading the Supreme Court of the United States from 1953 to 1969.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0006_d2",
+        "text": "Context note #6: Lyndon B. Johnson created the President's Commission on the Assassination of President Kennedy on November 29, 1963.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d5",
+        "text": "Context note #6: Federal judicial appointments require nomination by the President and confirmation by the Senate.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d11",
+        "text": "Context note #6: The United States Congress consists of the Senate and the House of Representatives.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d18",
+        "text": "Context note #6: John F. Kennedy, the 35th president of the United States, was assassinated on November 22, 1963 in Dallas, Texas.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d6",
+        "text": "Context note #6: Constitutional law in the United States is largely shaped by landmark decisions of the Supreme Court.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d14",
+        "text": "Context note #6: The Federal Bureau of Investigation (FBI) conducted extensive investigations following the assassination.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d3",
+        "text": "Context note #6: The House Select Committee on Assassinations reinvestigated the assassination of JFK in 1976.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0006_d16",
+        "text": "Context note #6: Lee Harvey Oswald was arrested for the assassination of President Kennedy shortly after the shooting.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "Supreme Court of the United States",
+    "gold_supporting_ids": [
+      "hotpotqa_0006_p1",
+      "hotpotqa_0006_p2"
+    ],
+    "is_multi_hop": true
+  },
+  {
+    "id": "hotpotqa_0007",
+    "dataset": "hotpotqa",
+    "question": "Were Scott Derrickson and Ed Wood of the same nationality? [Variant #7]",
+    "passages": [
+      {
+        "id": "hotpotqa_0007_d7",
+        "text": "Context note #7: The Exorcism of Emily Rose is a 2005 American legal drama supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_p2",
+        "text": "Edward Davis Wood Jr. (October 10, 1924 - December 10, 1978) was an American filmmaker, actor, and pulp crime author.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0007_d3",
+        "text": "Context note #7: C. Robert Cargill is an American screenwriter, novelist, and former film critic known as Massawyrm.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d17",
+        "text": "Context note #7: Glen or Glenda is a 1953 American docudrama film about cross-dressing and transvestism.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d18",
+        "text": "Context note #7: Bela Lugosi was a Hungarian-American actor best remembered for portraying Count Dracula in the 1931 film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d13",
+        "text": "Context note #7: Doctor Strange is a 2016 American superhero film based on the Marvel Comics character of the same name.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d9",
+        "text": "Context note #7: Benedict Cumberbatch portrays Dr. Stephen Strange in Doctor Strange, directed by Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d8",
+        "text": "Context note #7: Deliver Us from Evil is a 2014 American supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d10",
+        "text": "Context note #7: Sinister is a 2012 supernatural horror film directed by Scott Derrickson and written by Derrickson and C. Robert Cargill.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d11",
+        "text": "Context note #7: Night of the Ghouls is a 1959 horror film written and directed by Edward D. Wood Jr.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d1",
+        "text": "Context note #7: Ed Wood in the 1950s made several low-budget science fiction and horror films including Glen or Glenda and Plan 9 from Outer Space.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_p1",
+        "text": "Scott Derrickson (born July 16, 1966) is an American filmmaker. He is best known for directing horror films such as Sinister and the Marvel Cinematic Universe superhero film Doctor Strange.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0007_d5",
+        "text": "Context note #7: Tim Burton directed the 1994 biographical comedy-drama film titled Ed Wood, starring Johnny Depp.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d16",
+        "text": "Context note #7: Sarah Derrickson is a film producer who collaborated on various projects in independent film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d2",
+        "text": "Context note #7: Orson Welles was an American director, actor, screenwriter, and producer who Wood greatly admired.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d15",
+        "text": "Context note #7: The Marvel Cinematic Universe is an American media franchise and shared universe centered on a series of superhero films.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d14",
+        "text": "Context note #7: American cinema has had a profound effect on world entertainment since the early 20th century.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d12",
+        "text": "Context note #7: Johnny Depp portrayed the eccentric director Ed Wood in the 1994 biographical film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d4",
+        "text": "Context note #7: Biola University is a private Christian university in La Mirada, California.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0007_d6",
+        "text": "Context note #7: Scott Derrickson attended Biola University where he earned a B.A. in Humanities with an emphasis on literature.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_supporting_ids": [
+      "hotpotqa_0007_p1",
+      "hotpotqa_0007_p2"
+    ],
+    "is_multi_hop": true
+  },
+  {
+    "id": "hotpotqa_0008",
+    "dataset": "hotpotqa",
+    "question": "Which film has the director who was born earlier, Inception or Pulp Fiction? [Variant #8]",
+    "passages": [
+      {
+        "id": "hotpotqa_0008_d15",
+        "text": "Context note #8: Dunkirk is a 2017 historical war film written, directed, and produced by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d9",
+        "text": "Context note #8: Film directors born in the 1960s and 1970s often drew inspiration from classic American and European cinema.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d7",
+        "text": "Context note #8: British film directors have made significant contributions to Hollywood and international cinema.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d17",
+        "text": "Context note #8: Django Unchained is a 2012 American revisionist Western film written and directed by Quentin Tarantino.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d16",
+        "text": "Context note #8: Quentin Tarantino is an American film director, screenwriter, producer, and author celebrated for his non-linear storylines.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d3",
+        "text": "Context note #8: Leonardo DiCaprio starred in Inception as Dom Cobb, a professional thief who steals information from subconscious minds.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d4",
+        "text": "Context note #8: Hans Zimmer composed the iconic score for Inception, including the track 'Time'.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d5",
+        "text": "Context note #8: Memento is a 2000 American neo-noir psychological mystery film written and directed by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_p2",
+        "text": "Pulp Fiction is a 1994 American crime film written and directed by Quentin Tarantino. Quentin Tarantino was born on March 27, 1963 in Knoxville, Tennessee.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0008_p1",
+        "text": "Inception is a 2010 science fiction action film written and directed by Christopher Nolan. Christopher Nolan was born on 30 July 1970 in London, England.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0008_d10",
+        "text": "Context note #8: Cinema of the United States has produced many critically acclaimed directors across the 1990s and 2000s.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d12",
+        "text": "Context note #8: Christopher Nolan is a British-American filmmaker known for his Hollywood blockbusters with complex storytelling.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d14",
+        "text": "Context note #8: Cannes Film Festival awarded the Palme d'Or to Pulp Fiction in May 1994.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d8",
+        "text": "Context note #8: Kill Bill: Volume 1 is a 2003 American martial arts film written and directed by Quentin Tarantino.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d13",
+        "text": "Context note #8: Oppenheimer is a 2023 biographical drama film written, directed, and produced by Christopher Nolan.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d2",
+        "text": "Context note #8: John Travolta and Samuel L. Jackson starred in Pulp Fiction as Vincent Vega and Jules Winnfield.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d11",
+        "text": "Context note #8: Reservoir Dogs is a 1992 American independent crime film written and directed by Quentin Tarantino in his feature-length debut.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d6",
+        "text": "Context note #8: Inglourious Basterds is a 2009 war film written and directed by Quentin Tarantino starring Brad Pitt.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d18",
+        "text": "Context note #8: Once Upon a Time in Hollywood is a 2019 comedy-drama film written and directed by Quentin Tarantino.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0008_d1",
+        "text": "Context note #8: The 67th Academy Awards ceremony took place on Monday, March 27, 1995 at the Shrine Auditorium in Los Angeles.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "Pulp Fiction",
+    "gold_supporting_ids": [
+      "hotpotqa_0008_p1",
+      "hotpotqa_0008_p2"
+    ],
+    "is_multi_hop": true
+  },
+  {
+    "id": "hotpotqa_0009",
+    "dataset": "hotpotqa",
+    "question": "What government agency was headed by the author of the report on the assassination of John F. Kennedy? [Variant #9]",
+    "passages": [
+      {
+        "id": "hotpotqa_0009_d5",
+        "text": "Context note #9: Jack Ruby shot and killed Lee Harvey Oswald in the basement of Dallas police headquarters.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_p2",
+        "text": "Earl Warren served as the 14th Chief Justice of the United States, heading the Supreme Court of the United States from 1953 to 1969.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0009_d2",
+        "text": "Context note #9: The Supreme Court of the United States is the highest court in the federal judiciary of the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d12",
+        "text": "Context note #9: United States Court of Appeals serves as intermediate appellate federal courts.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d13",
+        "text": "Context note #9: Federal judicial appointments require nomination by the President and confirmation by the Senate.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d9",
+        "text": "Context note #9: John F. Kennedy, the 35th president of the United States, was assassinated on November 22, 1963 in Dallas, Texas.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d4",
+        "text": "Context note #9: Dealey Plaza in Dallas was the location where President Kennedy's motorcade was fired upon.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_p1",
+        "text": "The Warren Commission report on the assassination of President John F. Kennedy was headed by Chief Justice Earl Warren.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0009_d11",
+        "text": "Context note #9: Lyndon B. Johnson created the President's Commission on the Assassination of President Kennedy on November 29, 1963.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d14",
+        "text": "Context note #9: The United States Congress consists of the Senate and the House of Representatives.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d19",
+        "text": "Context note #9: Gerald Ford was a member of the Warren Commission before later becoming President of the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d15",
+        "text": "Context note #9: Constitutional law in the United States is largely shaped by landmark decisions of the Supreme Court.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d20",
+        "text": "Context note #9: The Secret Service is responsible for protecting the President of the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d16",
+        "text": "Context note #9: Chief Justice Earl Warren presided over the landmark case Brown v. Board of Education in 1954.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d17",
+        "text": "Context note #9: The National Archives and Records Administration preserves historical government records.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d8",
+        "text": "Context note #9: Texas Governor John Connally was also wounded during the shooting of President Kennedy.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d18",
+        "text": "Context note #9: Allen Dulles, former director of the CIA, was appointed as a member of the Warren Commission.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d6",
+        "text": "Context note #9: The Department of Justice oversees federal law enforcement in the United States.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d1",
+        "text": "Context note #9: The House Select Committee on Assassinations reinvestigated the assassination of JFK in 1976.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d10",
+        "text": "Context note #9: The Federal Bureau of Investigation (FBI) conducted extensive investigations following the assassination.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d3",
+        "text": "Context note #9: The Central Intelligence Agency (CIA) provided intelligence dossiers during the 1960s.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0009_d7",
+        "text": "Context note #9: Lee Harvey Oswald was arrested for the assassination of President Kennedy shortly after the shooting.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "Supreme Court of the United States",
+    "gold_supporting_ids": [
+      "hotpotqa_0009_p1",
+      "hotpotqa_0009_p2"
+    ],
+    "is_multi_hop": true
+  },
+  {
+    "id": "hotpotqa_0010",
+    "dataset": "hotpotqa",
+    "question": "Were Scott Derrickson and Ed Wood of the same nationality? [Variant #10]",
+    "passages": [
+      {
+        "id": "hotpotqa_0010_d11",
+        "text": "Context note #10: Biola University is a private Christian university in La Mirada, California.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d15",
+        "text": "Context note #10: Sarah Derrickson is a film producer who collaborated on various projects in independent film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d2",
+        "text": "Context note #10: Johnny Depp portrayed the eccentric director Ed Wood in the 1994 biographical film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d12",
+        "text": "Context note #10: The Exorcism of Emily Rose is a 2005 American legal drama supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d6",
+        "text": "Context note #10: Scott Derrickson attended Biola University where he earned a B.A. in Humanities with an emphasis on literature.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d18",
+        "text": "Context note #10: American cinema has had a profound effect on world entertainment since the early 20th century.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d17",
+        "text": "Context note #10: Sinister is a 2012 supernatural horror film directed by Scott Derrickson and written by Derrickson and C. Robert Cargill.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d1",
+        "text": "Context note #10: Glen or Glenda is a 1953 American docudrama film about cross-dressing and transvestism.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d8",
+        "text": "Context note #10: Bela Lugosi was a Hungarian-American actor best remembered for portraying Count Dracula in the 1931 film.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_p2",
+        "text": "Edward Davis Wood Jr. (October 10, 1924 - December 10, 1978) was an American filmmaker, actor, and pulp crime author.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0010_p1",
+        "text": "Scott Derrickson (born July 16, 1966) is an American filmmaker. He is best known for directing horror films such as Sinister and the Marvel Cinematic Universe superhero film Doctor Strange.",
+        "is_supporting": true
+      },
+      {
+        "id": "hotpotqa_0010_d14",
+        "text": "Context note #10: C. Robert Cargill is an American screenwriter, novelist, and former film critic known as Massawyrm.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d5",
+        "text": "Context note #10: Bride of the Monster is a 1955 science fiction horror film co-written and directed by Edward D. Wood Jr.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d10",
+        "text": "Context note #10: Night of the Ghouls is a 1959 horror film written and directed by Edward D. Wood Jr.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d16",
+        "text": "Context note #10: The Marvel Cinematic Universe is an American media franchise and shared universe centered on a series of superhero films.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d13",
+        "text": "Context note #10: Deliver Us from Evil is a 2014 American supernatural horror film directed by Scott Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d4",
+        "text": "Context note #10: Benedict Cumberbatch portrays Dr. Stephen Strange in Doctor Strange, directed by Derrickson.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d7",
+        "text": "Context note #10: Doctor Strange is a 2016 American superhero film based on the Marvel Comics character of the same name.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d3",
+        "text": "Context note #10: Ed Wood in the 1950s made several low-budget science fiction and horror films including Glen or Glenda and Plan 9 from Outer Space.",
+        "is_supporting": false
+      },
+      {
+        "id": "hotpotqa_0010_d9",
+        "text": "Context note #10: Tim Burton directed the 1994 biographical comedy-drama film titled Ed Wood, starring Johnny Depp.",
+        "is_supporting": false
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_supporting_ids": [
+      "hotpotqa_0010_p1",
+      "hotpotqa_0010_p2"
+    ],
+    "is_multi_hop": true
+  }
+]

@@ -1,0 +1,7 @@
+strategy,tokens_saved_pct,em,f1,ci_low,ci_high,f1_retained_pct,evidence_recall,latency_ms,fallback_rate_pct
+full_context,0.0,1.0,1.0,1.0,1.0,100.0,1.0,0.29,0.0
+top_k,74.9959,0.33,0.33,0.24,0.42,33.0,0.33,0.38,0.0
+random_truncation,58.9733,0.49,0.49,0.39,0.58,49.0,0.49,0.41,0.0
+bm25,75.9004,0.5,0.5,0.4,0.5902,50.0,0.5,0.58,0.0
+rerank_only,58.0421,1.0,1.0,1.0,1.0,100.0,1.0,0.66,0.0
+contextpilot,91.1362,1.0,1.0,1.0,1.0,100.0,1.0,0.7,0.0

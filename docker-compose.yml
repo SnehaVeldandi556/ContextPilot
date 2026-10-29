@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: contextpilot-api
+    command: uvicorn contextpilot.app.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - DIRECT_URL=${DIRECT_URL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-mock}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
+      - CONTEXTPILOT_DEFAULT_MODE=${CONTEXTPILOT_DEFAULT_MODE:-guarded}
+      - CONTEXTPILOT_TOKEN_BUDGET=${CONTEXTPILOT_TOKEN_BUDGET:-2000}
+      - CONTEXTPILOT_SKIP_THRESHOLD_TOKENS=${CONTEXTPILOT_SKIP_THRESHOLD_TOKENS:-2000}
+      - DEVICE=cpu
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: contextpilot-dashboard
+    command: streamlit run contextpilot/dashboard/streamlit_app.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - API_URL=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
