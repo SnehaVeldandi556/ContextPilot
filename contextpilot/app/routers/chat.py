@@ -16,7 +16,8 @@ from contextpilot.app.schemas import (
     ContextPilotReport,
     KeptPassageItem,
     DroppedPassageItem,
-    ShadowReport
+    ShadowReport,
+    PassageInput
 )
 from contextpilot.pipeline.graph import get_pipeline
 from contextpilot.tokens.counter import default_token_counter
@@ -38,10 +39,22 @@ async def chat_completions(
     question = ""
     for msg in reversed(request.messages):
         if msg.role.lower() == "user":
-            question = msg.content
+            if isinstance(msg.content, str):
+                question = msg.content
+            elif isinstance(msg.content, list):
+                parts = []
+                for item in msg.content:
+                    if isinstance(item, dict) and "text" in item:
+                        parts.append(str(item["text"]))
+                    elif isinstance(item, str):
+                        parts.append(item)
+                question = " ".join(parts)
+            else:
+                question = str(msg.content or "")
             break
     if not question and request.messages:
-        question = request.messages[-1].content
+        last_c = request.messages[-1].content
+        question = last_c if isinstance(last_c, str) else str(last_c or "")
 
     # Extract passages and contextpilot settings
     cp_cfg = request.contextpilot
@@ -58,7 +71,13 @@ async def chat_completions(
 
     if cp_cfg:
         if cp_cfg.mode:
-            mode = cp_cfg.mode
+            m = str(cp_cfg.mode).lower()
+            if "shadow" in m:
+                mode = "shadow"
+            elif "aggress" in m:
+                mode = "aggressive"
+            else:
+                mode = "guarded"
         if cp_cfg.token_budget is not None:
             token_budget = cp_cfg.token_budget
         if cp_cfg.skip_threshold_tokens is not None:
@@ -72,7 +91,10 @@ async def chat_completions(
         if cp_cfg.sentence_prune_threshold is not None:
             prune_threshold = cp_cfg.sentence_prune_threshold
         if cp_cfg.passages:
-            passages = [p.model_dump() for p in cp_cfg.passages]
+            passages = [
+                PassageInput.from_item(p, default_idx=i + 1).model_dump()
+                for i, p in enumerate(cp_cfg.passages)
+            ]
         if cp_cfg.retrieval:
             retrieval_cfg = cp_cfg.retrieval.model_dump()
 

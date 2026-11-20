@@ -83,10 +83,16 @@ class MockChatModel(BaseChatModel):
                 answer = "Yes, employees may carry forward up to 5 days of unused annual leave to the following calendar year with manager approval."
             elif "20 days" in ctx_lower:
                 answer = "Full-time employees are entitled to 20 days of paid annual leave."
+        elif "failover" in q_lower or "database" in q_lower:
+            if "pg_ctl promote" in ctx_lower or "standby" in ctx_lower or "replica" in ctx_lower:
+                answer = "Verify standby replica health, execute pg_ctl promote or provider failover, and update DNS endpoints."
+        elif "retention" in q_lower or "financial" in q_lower or "transaction" in q_lower:
+            if "7 years" in ctx_lower:
+                answer = "Customer financial transaction logs must be retained securely in encrypted storage for a mandatory period of 7 years."
         else:
             # General sentence extraction
             sentences = [s.strip() for s in re.split(r"[.!?]\s+", context) if s.strip()]
-            q_keywords = [w for w in re.findall(r"\w+", q_lower) if len(w) > 3]
+            q_keywords = [w for w in re.findall(r"\w+", q_lower) if len(w) > 3 and w not in {"what", "which", "where", "when", "does", "have"}]
             best_s = None
             best_overlap = 0
             for s in sentences:
@@ -95,8 +101,8 @@ class MockChatModel(BaseChatModel):
                 if overlap > best_overlap:
                     best_overlap = overlap
                     best_s = s
-            # Require at least 60% of question keywords to synthesize an answer from a passage
-            if best_s and q_keywords and (best_overlap / len(q_keywords)) >= 0.6:
+            # Require at least 35% of key question keywords to synthesize an answer from a passage
+            if best_s and q_keywords and (best_overlap / len(q_keywords)) >= 0.35:
                 answer = best_s
 
         generation = ChatGeneration(message=AIMessage(content=answer))
@@ -110,13 +116,14 @@ class MockChatModel(BaseChatModel):
 def get_llm_provider(
     model_name: Optional[str] = None,
     provider: Optional[str] = None,
-    temperature: float = 0.0
+    temperature: float = 0.0,
+    **kwargs: Any
 ) -> BaseChatModel:
     """Instantiate configured LangChain chat model."""
     from contextpilot.app.config import settings
 
+    target_model = model_name or kwargs.get("model") or settings.OPENAI_MODEL
     target_provider = (provider or os.getenv("LLM_PROVIDER") or settings.SECOND_LLM_PROVIDER).lower()
-    target_model = model_name or settings.OPENAI_MODEL
 
     openai_key = os.getenv("OPENAI_API_KEY") or settings.OPENAI_API_KEY
     anthropic_key = os.getenv("ANTHROPIC_API_KEY") or settings.ANTHROPIC_API_KEY

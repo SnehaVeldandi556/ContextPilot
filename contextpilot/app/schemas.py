@@ -5,9 +5,25 @@ from pydantic import BaseModel, Field
 
 
 class PassageInput(BaseModel):
-    id: str
+    id: Optional[str] = None
     text: str
     metadata: Optional[Dict[str, Any]] = None
+
+    @classmethod
+    def from_item(cls, item: Any, default_idx: int = 1) -> "PassageInput":
+        if isinstance(item, str):
+            return cls(id=f"doc_{default_idx}", text=item)
+        if isinstance(item, dict):
+            return cls(
+                id=str(item.get("id") or f"doc_{default_idx}"),
+                text=str(item.get("text", "")),
+                metadata=item.get("metadata")
+            )
+        if isinstance(item, cls):
+            if not item.id:
+                item.id = f"doc_{default_idx}"
+            return item
+        return cls(id=f"doc_{default_idx}", text=str(item))
 
 
 class RetrievalConfig(BaseModel):
@@ -16,20 +32,20 @@ class RetrievalConfig(BaseModel):
 
 
 class ContextPilotConfig(BaseModel):
-    mode: Optional[Literal["shadow", "guarded", "aggressive"]] = None
+    mode: Optional[str] = None
     token_budget: Optional[int] = None
     skip_threshold_tokens: Optional[int] = 2000
     dedupe_threshold: Optional[float] = None
     score_drop_ratio: Optional[float] = None
     guard_threshold: Optional[float] = None
     sentence_prune_threshold: Optional[float] = None
-    passages: Optional[List[PassageInput]] = None
+    passages: Optional[List[Union[PassageInput, Dict[str, Any], str]]] = None
     retrieval: Optional[RetrievalConfig] = None
 
 
 class ChatMessage(BaseModel):
-    role: str
-    content: str
+    role: str = "user"
+    content: Optional[Union[str, List[Any], Dict[str, Any]]] = ""
     name: Optional[str] = None
 
 

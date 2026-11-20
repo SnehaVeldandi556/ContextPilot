@@ -21,6 +21,9 @@ htmlcov/
 *.sqlite3
 *.log
 .locks/
+.env
+.env.*
+!.env.example
 
 # IDE
 .vscode/

@@ -103,8 +103,10 @@ class NLIEvidenceGuard:
         supported_tokens = sum(1 for tok in h_tokens if tok in p_lower)
         coverage = supported_tokens / len(h_tokens)
 
-        # Key entity check
-        entities = re.findall(r"\b[A-Z][a-z0-9]+(?:\s+[A-Z][a-z0-9]+)*\b", hypothesis)
+        # Key named entity check (ignoring common leading affirmative/grammatical words)
+        stopwords_entity = {"Yes", "No", "The", "This", "It", "They", "If", "However", "In", "On", "At", "For", "An", "A"}
+        raw_entities = re.findall(r"\b[A-Z][a-z0-9]+(?:\s+[A-Z][a-z0-9]+)*\b", hypothesis)
+        entities = [e for e in raw_entities if e not in stopwords_entity]
         if entities:
             entity_supported = sum(1 for ent in entities if ent.lower() in p_lower)
             entity_ratio = entity_supported / len(entities)

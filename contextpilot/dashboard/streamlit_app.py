@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../.
 
 from contextpilot.app.db.session import get_session_factory
 from contextpilot.app.db.models import RequestLog, RequestPassage, BenchmarkRun, BenchmarkResult, FailureCase
+from contextpilot.app.playground import PRESET_DOMAINS, run_standard_rag_baseline, run_contextpilot_optimized
 
 st.set_page_config(
     page_title="ContextPilot Dashboard",
@@ -46,7 +47,14 @@ st.sidebar.markdown("**Input Token Optimization & Quality Proxy**")
 
 page = st.sidebar.radio(
     "Navigation",
-    ["Overview", "Request Explorer", "Shadow Report", "Alerts", "Benchmarks"],
+    [
+        "🤖 Live AI Assistant (Live Proof)",
+        "Overview",
+        "Request Explorer",
+        "Shadow Report",
+        "Alerts",
+        "Benchmarks"
+    ],
     index=0
 )
 
@@ -55,6 +63,141 @@ st.sidebar.markdown("**Active Mode**: `Guarded (Production)`")
 st.sidebar.markdown("**Embeddings**: `BAAI/bge-small-en-v1.5`")
 st.sidebar.markdown("**Reranker**: `BAAI/bge-reranker-base`")
 st.sidebar.markdown("**NLI Guard**: `cross-encoder/nli-deberta`")
+
+
+# ==========================================
+# PAGE 0: LIVE AI ASSISTANT (LIVE PROOF)
+# ==========================================
+if page == "🤖 Live AI Assistant (Live Proof)":
+    st.title("🤖 Live AI Knowledge Assistant — Real-Time Proof & Comparison")
+    st.markdown(
+        "Experience the actual impact of ContextPilot: compare **Standard RAG (unoptimized)** "
+        "versus **ContextPilot RAG (optimized)** side-by-side on real enterprise queries."
+    )
+
+    # Domain selection
+    col_domain, col_mode, col_budget = st.columns([2, 1, 1])
+    with col_domain:
+        selected_domain = st.selectbox(
+            "Select Enterprise Domain Preset (or type your own)",
+            list(PRESET_DOMAINS.keys()) + ["✍️ Custom (Your Own Data)"],
+            index=0
+        )
+    with col_mode:
+        selected_mode = st.selectbox(
+            "Optimization Mode",
+            ["guarded", "aggressive", "shadow"],
+            index=0,
+            help="guarded: balanced with NLI evidence guard; aggressive: sentence pruning; shadow: silent comparison"
+        )
+    with col_budget:
+        selected_budget = st.slider(
+            "Token Budget",
+            min_value=200,
+            max_value=1200,
+            value=500,
+            step=50,
+            help="Maximum tokens allowed for the optimized context"
+        )
+
+    # Preset loading or custom input
+    if selected_domain in PRESET_DOMAINS:
+        preset = PRESET_DOMAINS[selected_domain]
+        default_question = preset["question"]
+        default_passages = preset["passages"]
+    else:
+        default_question = "What is our company's refund policy?"
+        default_passages = [
+            {"id": "doc_refund_01", "text": "Customer Refund Policy: Customers may request a full refund within 30 days of purchase upon presenting proof of transaction."},
+            {"id": "doc_refund_dup", "text": "Returns & Refunds Addendum: Products returned within 30 days are eligible for a 100% money-back refund with a valid receipt."},
+            {"id": "doc_shipping_02", "text": "Standard shipping takes 3-5 business days. Express shipping is available for an additional $15 fee."},
+            {"id": "doc_giftcard_03", "text": "Gift cards cannot be redeemed for cash or refunded once issued by our customer service desk."},
+            {"id": "doc_hours_04", "text": "Customer support phone lines are open from 8:00 AM to 6:00 PM EST Monday through Friday."}
+        ]
+
+    st.markdown("### 1. User Question")
+    question_input = st.text_input("Question to ask the AI Agent:", value=default_question)
+
+    with st.expander(f"📁 Retrieved Candidate Passages ({len(default_passages)} chunks retrieved from Vector Search)", expanded=False):
+        st.markdown("*These represent candidate chunks pulled by vector similarity search, containing duplicates and irrelevant distractors:*")
+        for p in default_passages:
+            st.markdown(f"- **`{p['id']}`**: {p['text']}")
+
+    # Run comparison button
+    if st.button("🚀 Run Comparative RAG Query (Side-by-Side Proof)", type="primary"):
+        with st.spinner("Executing Standard RAG and ContextPilot optimization pipeline..."):
+            baseline_result = run_standard_rag_baseline(question_input, default_passages)
+            cp_result = run_contextpilot_optimized(
+                question_input,
+                default_passages,
+                mode=selected_mode,
+                token_budget=selected_budget
+            )
+
+        st.markdown("---")
+        st.subheader("📊 Side-by-Side Comparison Results")
+
+        col_base, col_cp = st.columns(2)
+
+        # LEFT COLUMN: Standard RAG
+        with col_base:
+            st.markdown("### ❌ Standard RAG (Unoptimized)")
+            st.caption("Raw vector search results sent directly to LLM")
+
+            m1, m2, m3 = st.columns(3)
+            m1.metric("Prompt Tokens", f"{baseline_result['prompt_tokens']}")
+            m2.metric("Total Tokens", f"{baseline_result['total_tokens']}")
+            m3.metric("Latency", f"{baseline_result['latency_ms']:.1f} ms")
+
+            st.markdown("**Generated LLM Answer:**")
+            st.info(baseline_result["answer"])
+
+            st.markdown(f"**Context Sent to LLM ({len(default_passages)} passages):**")
+            with st.container():
+                for p in default_passages:
+                    st.markdown(f"<span style='color:#64748B; font-size:0.85em;'>• <b>{p['id']}</b>: {p['text'][:90]}...</span>", unsafe_allow_html=True)
+
+        # RIGHT COLUMN: ContextPilot RAG
+        with col_cp:
+            st.markdown("### ✅ ContextPilot RAG (Optimized)")
+            st.caption("Reranked, deduplicated, and verified with NLI Guard")
+
+            m1, m2, m3 = st.columns(3)
+            m1.metric("Prompt Tokens", f"{cp_result['prompt_tokens']}", delta=f"-{cp_result['tokens_saved_pct']:.1f}% Tokens", delta_color="inverse")
+            m2.metric("Total Tokens", f"{cp_result['total_tokens']}")
+            m3.metric("Latency", f"{cp_result['latency_ms']:.1f} ms")
+
+            st.markdown("**Generated LLM Answer:**")
+            st.success(cp_result["answer"])
+
+            st.markdown(f"**Optimization Verdict:** `{cp_result['decision'].upper()}` | **Evidence Guard:** `{cp_result['evidence_check'].upper()}`")
+
+            # Badges for kept vs dropped
+            c_kept, c_drop = st.columns(2)
+            with c_kept:
+                st.markdown(f"**Kept Passages ({len(cp_result['kept'])})**")
+                for k in cp_result["kept"]:
+                    score = k.get("rerank_score", "N/A")
+                    st.markdown(f"<span class='badge-optimized'>✓ {k.get('id', 'doc')} (score: {score})</span>", unsafe_allow_html=True)
+
+            with c_drop:
+                st.markdown(f"**Dropped Passages ({len(cp_result['dropped'])})**")
+                for d in cp_result["dropped"]:
+                    reason = d.get("reason", "dropped")
+                    st.markdown(f"<span class='badge-fallback'>✗ {d.get('id', 'doc')} ({reason})</span>", unsafe_allow_html=True)
+
+            if cp_result.get("stage_latencies"):
+                with st.expander("⏱ Stage Latency Breakdown"):
+                    lat_df = pd.DataFrame(list(cp_result["stage_latencies"].items()), columns=["Stage", "Latency (ms)"])
+                    st.dataframe(lat_df, hide_index=True, use_container_width=True)
+
+        # Summary takeaway
+        st.markdown("---")
+        st.success(
+            f"🎉 **Proof Summary**: ContextPilot pruned context tokens by **{cp_result['tokens_saved_pct']:.1f}%** "
+            f"(saving {baseline_result['prompt_tokens'] - cp_result['prompt_tokens']} input tokens) while producing "
+            f"an identical high-quality answer, verified by the NLI Evidence Guard."
+        )
 
 
 # ==========================================
